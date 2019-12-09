@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/one_hundred_sixteen_dp"
+        android:layout_height="@dimen/forty_three_dp"
+        android:layout_marginTop="@dimen/ninety_dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:src="@drawable/ic_line_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvShortDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sixty_dp"
+        android:layout_marginTop="@dimen/eighteen_dp"
+        android:layout_marginEnd="@dimen/sixty_dp"
+        android:text="@string/config_description"
+        android:textAlignment="center"
+        android:textColor="@color/textAccentColor"
+        android:textSize="@dimen/text_fifteen_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDivider" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="183dp"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_marginBottom="@dimen/twenty_dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivAccept"
+        app:layout_constraintTop_toBottomOf="@+id/tvShortDescription" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPagerClickStart"
+        android:layout_width="@dimen/sixty_dp"
+        android:layout_height="@dimen/sixty_dp"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:padding="@dimen/twenty_dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewPager"
+        tools:srcCompat="@drawable/ic_arrow_start_opacity" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPagerClickEnd"
+        android:layout_width="@dimen/sixty_dp"
+        android:layout_height="@dimen/sixty_dp"
+        android:layout_marginEnd="@dimen/twenty_dp"
+        android:padding="@dimen/twenty_dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewPager"
+        tools:srcCompat="@drawable/ic_arrow_end_white" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivAccept"
+        android:layout_width="@dimen/three_hundred_forty_three_dp"
+        android:layout_height="@dimen/fifty_six_dp"
+        android:layout_marginBottom="@dimen/thirty_four"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_btn_main_gradient" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_fourteen_sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAccept"
+        app:layout_constraintEnd_toEndOf="@+id/ivAccept"
+        app:layout_constraintStart_toStartOf="@+id/ivAccept"
+        app:layout_constraintTop_toTopOf="@+id/ivAccept"
+        tools:text="@string/begin" />
+</androidx.constraintlayout.widget.ConstraintLayout>

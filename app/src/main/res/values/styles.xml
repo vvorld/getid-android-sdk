@@ -1,0 +1,78 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowBackground">@drawable/drawable_splash</item>
+    </style>
+
+    <style name="LightViewItemStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+    </style>
+
+    <!-- ToolBar -->
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="DialogParent">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+    </style>
+
+    <style name="DialogHeaderText">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="DialogMessageText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="DialogActionTextButton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="hintTextColor">@color/whiteOpacityColor</item>
+
+        <item name="boxStrokeColor">@color/color_accent_state</item>
+        <item name="boxStrokeWidth">@dimen/one_dp</item>
+
+        <item name="boxCornerRadiusTopStart">@dimen/eight_dp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/eight_dp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/eight_dp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/eight_dp</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText" />
+</resources>

@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.sdk.getid"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(":getidlib")
+
+    def appAnnotations = rootProject.ext.appAnnotations
+    def appDependencies = rootProject.ext.appDependencies
+    def testDependencies = rootProject.ext.testDependencies
+
+    // Android Support
+    implementation appDependencies.appCompat
+    implementation appDependencies.androidCore
+    implementation appDependencies.legacyV4
+    implementation appDependencies.material // Conflict library
+    implementation appDependencies.ktx
+    kapt appAnnotations.android
+
+    // Android Component
+    implementation appDependencies.constraintLayout
+    implementation appDependencies.recyclerView
+    implementation appDependencies.viewPager2
+
+    // Kotlin
+    implementation appDependencies.kotlin
+    implementation appDependencies.kotlinCoroutines
+    implementation appDependencies.kotlinReflect
+
+    // Retrofit
+    implementation appDependencies.retrofit
+    implementation appDependencies.retrofitGson
+    implementation appDependencies.retrofitRx
+    implementation appDependencies.retrofitOkHttp
+
+    // Gson
+    implementation appDependencies.gson
+
+    // Cicerone
+    implementation appDependencies.cicerone
+
+    // Glide
+    implementation appDependencies.glide
+    kapt appAnnotations.glide
+
+    // Koin
+    implementation appDependencies.koin
+    implementation appDependencies.koinScope
+    implementation appDependencies.koinViewModel
+
+    implementation appDependencies.imagePicker
+
+    // UI component
+    implementation appDependencies.editSpinner
+
+    // AppCenter
+    implementation appDependencies.appcenterAnalytics
+    implementation appDependencies.appcenterCrashes
+
+    // Android Test
+    testImplementation testDependencies.junit
+    androidTestImplementation testDependencies.androidJunit
+    androidTestImplementation testDependencies.runner
+    androidTestImplementation testDependencies.espresso
+}
+
+androidExtensions {
+    experimental = true
+}

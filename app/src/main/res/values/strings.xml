@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">GetId</string>
+
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="pressAgain">Please, press once again to exit.</string>
+
+    <string name="start">Start</string>
+    <string name="begin">Begin</string>
+    <string name="i_agree">I agree</string>
+    <string name="next">Next</string>
+    <string name="submit">Submit</string>
+    <string name="done">Done</string>
+    <string name="choose_flow">Choose Flow Type</string>
+
+    <string name="terms_of_use">Terms of use</string>
+    <string name="private_policy">Privacy policy</string>
+
+    <string name="okay">Okay</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="lets_go">Let\'s go</string>
+    <string name="smile">Smile</string>
+    <string name="good">Good!</string>
+    <string name="nice">Nice!</string>
+    <string name="excellent">Excellent!</string>
+    <string name="almost_done">Almost done!</string>
+    <string name="got_it">Got it</string>
+    <string name="well_done">Well done!</string>
+    <string name="finish">Finish</string>
+
+    <string name="completion_message">Thank you! Now you can go to the next step.</string>
+
+    <string name="try_again">Try again</string>
+    <string name="try_later">Try later</string>
+
+    <string name="go_to_settings">Go to settings</string>
+
+    <!-- Screens -->
+    <string name="screen_title_form">Personal data fields</string>
+    <string name="screen_title_choosing_document_type">Choose document</string>
+    <string name="screen_title_document_photo">Make document photo</string>
+    <string name="screen_title_front_side_photo">Make front side photo</string>
+    <string name="screen_title_back_side_photo">Make back side photo</string>
+    <string name="screen_title_selfie_photo">Make selfie photo</string>
+
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <!-- FlowTypeChoose -->
+    <string name="document_and_photo">Document &amp; Photo</string>
+    <string name="document_only">Document only</string>
+
+</resources>
