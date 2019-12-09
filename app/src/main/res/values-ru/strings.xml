@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">GetId</string>
+
+    <string name="error">Ошибка</string>
+    <string name="ok">Хорошо</string>
+
+    <string name="no_internet_connection">Подключение к Интернету отсутствует</string>
+    <string name="pressAgain">Пожалуйста, нажмите еще раз для выхода.</string>
+
+    <string name="start">Start</string>
+    <string name="begin">Начать</string>
+    <string name="i_agree">Согласен</string>
+    <string name="next">Дальше</string>
+    <string name="submit">Отправить</string>
+    <string name="done">Готово</string>
+    <string name="choose_flow">Начать</string>
+
+    <string name="terms_of_use">Условиями использования</string>
+    <string name="private_policy">Политикой конфиденциальности</string>
+
+    <string name="okay">Хорошо</string>
+    <string name="cancel">Отмена</string>
+
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+    <string name="lets_go">Начать</string>
+    <string name="smile">Улыбнитесь</string>
+    <string name="good">Хорошо!</string>
+    <string name="nice">Отлично!</string>
+    <string name="excellent">Прекрасно!</string>
+    <string name="almost_done">Почти готово!</string>
+    <string name="got_it">Хорошо</string>
+    <string name="well_done">Отлично!</string>
+    <string name="finish">Дальше</string>
+
+    <string name="completion_message">Спасибо! Теперь можно перейти к следующему шагу.</string>
+
+    <string name="try_again">Ещё раз</string>
+    <string name="try_later">Попробовать позже</string>
+
+    <string name="go_to_settings">Перейдите в настройки</string>
+
+    <!-- Screens -->
+    <string name="screen_title_choosing_document_type">Выбор документа</string>
+
+    <!-- FlowTypeChoose -->
+    <string name="document_and_photo">Документ и Фото</string>
+    <string name="document_only">Только документ</string>
+
+
+</resources>

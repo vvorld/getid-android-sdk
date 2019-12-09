@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<dimen name="text_five_sp">5sp</dimen>
+	<dimen name="text_ten_sp">10sp</dimen>
+	<dimen name="text_twelve_sp">12sp</dimen>
+	<dimen name="text_thirteen_sp">13sp</dimen>
+	<dimen name="text_fourteen_sp">14sp</dimen>
+	<dimen name="text_fifteen_sp">15sp</dimen>
+	<dimen name="text_toolbar_size">16sp</dimen>
+	<dimen name="text_sixteen_sp">16sp</dimen>
+	<dimen name="text_seventeen_sp">17sp</dimen>
+	<dimen name="text_eighteen_sp">18sp</dimen>
+	<dimen name="text_nineteen_sp">19sp</dimen>
+	<dimen name="text_twenty_sp">20sp</dimen>
+	<dimen name="text_twenty_one_sp">21sp</dimen>
+	<dimen name="text_twenty_two_sp">22sp</dimen>
+	<dimen name="text_twenty_four_sp">24sp</dimen>
+	<dimen name="text_twenty_five_sp">25sp</dimen>
+	<dimen name="text_twenty_six_sp">26sp</dimen>
+	<dimen name="text_twenty_seven_sp">27sp</dimen>
+	<dimen name="text_twenty_eight_sp">28sp</dimen>
+	<dimen name="text_thirty_two_sp">32sp</dimen>
+	<dimen name="text_thirty_four_sp">34sp</dimen>
+	<dimen name="text_thirty_eight_sp">38sp</dimen>
+	<dimen name="text_forty_sp">40sp</dimen>
+	<dimen name="text_forty_three_sp">43sp</dimen>
+	<dimen name="text_forty_four_sp">44sp</dimen>
+	<dimen name="text_forty_five_sp">45sp</dimen>
+	<dimen name="text_forty_seven_sp">47sp</dimen>
+	<dimen name="text_fifty_four_sp">54sp</dimen>
+	<dimen name="text_fifty_six_sp">56sp</dimen>
+	<dimen name="text_sixty_four_sp">64sp</dimen>
+	<dimen name="text_sixty_five_sp">65sp</dimen>
+	<dimen name="text_seventy_sp">70sp</dimen>
+
+
+	<dimen name="half_of_one_dp">0.5dp</dimen>
+	<dimen name="one_dp">1dp</dimen>
+	<dimen name="two_dp">2dp</dimen>
+	<dimen name="three_dp">3dp</dimen>
+	<dimen name="four_dp">4dp</dimen>
+	<dimen name="five_dp">5dp</dimen>
+	<dimen name="six_dp">6dp</dimen>
+	<dimen name="seven_dp">7dp</dimen>
+	<dimen name="eight_dp">8dp</dimen>
+	<dimen name="ten_dp">10dp</dimen>
+	<dimen name="twelve_dp">12dp</dimen>
+	<dimen name="thirteen_dp">13dp</dimen>
+	<dimen name="fourteen_dp">14dp</dimen>
+	<dimen name="fifteen_dp">15dp</dimen>
+	<dimen name="sixteen_dp">16dp</dimen>
+	<dimen name="eighteen_dp">18dp</dimen>
+	<dimen name="nineteen_dp">19dp</dimen>
+	<dimen name="twenty_dp">20dp</dimen>
+	<dimen name="twenty_two_dp">22dp</dimen>
+	<dimen name="twenty_three_dp">23dp</dimen>
+	<dimen name="twenty_four_dp">24dp</dimen>
+	<dimen name="twenty_five_dp">25dp</dimen>
+	<dimen name="twenty_eight_dp">28dp</dimen>
+	<dimen name="thirty_dp">30dp</dimen>
+	<dimen name="thirty_two">32dp</dimen>
+	<dimen name="thirty_four">34dp</dimen>
+	<dimen name="thirty_five">35dp</dimen>
+	<dimen name="thirty_six">36dp</dimen>
+	<dimen name="thirty_seven">37dp</dimen>
+	<dimen name="thirty_eight">38dp</dimen>
+	<dimen name="thirty_nine">39dp</dimen>
+	<dimen name="forty_dp">40dp</dimen>
+	<dimen name="forty_two_dp">42dp</dimen>
+	<dimen name="forty_three_dp">43dp</dimen>
+	<dimen name="forty_four_dp">44dp</dimen>
+	<dimen name="forty_five_dp">45dp</dimen>
+	<dimen name="forty_eight">48dp</dimen>
+	<dimen name="fifty_dp">50dp</dimen>
+	<dimen name="fifty_two_dp">52dp</dimen>
+	<dimen name="fifty_six_dp">56dp</dimen>
+	<dimen name="fifty_eight_dp">58dp</dimen>
+	<dimen name="sixty_dp">60dp</dimen>
+	<dimen name="sixty_two_dp">62dp</dimen>
+	<dimen name="sixty_three_dp">63dp</dimen>
+	<dimen name="sixty_four_dp">64dp</dimen>
+	<dimen name="seventy_dp">70dp</dimen>
+	<dimen name="seventy_five_dp">75dp</dimen>
+	<dimen name="eighty_dp">80dp</dimen>
+	<dimen name="eighty_five_dp">85dp</dimen>
+	<dimen name="ninety_dp">90dp</dimen>
+	<dimen name="ninety_six_dp">96dp</dimen>
+	<dimen name="one_hundred_dp">100dp</dimen>
+	<dimen name="one_hundred_two_dp">102dp</dimen>
+	<dimen name="one_hundred_five_dp">105dp</dimen>
+	<dimen name="one_hundred_six_dp">106dp</dimen>
+	<dimen name="one_hundred_ten_dp">110dp</dimen>
+	<dimen name="one_hundred_twelve_dp">112dp</dimen>
+	<dimen name="one_hundred_sixteen_dp">116dp</dimen>
+	<dimen name="one_hundred_twenty_dp">120dp</dimen>
+	<dimen name="one_hundred_twenty_five_dp">125dp</dimen>
+	<dimen name="one_hundred_forty_dp">140dp</dimen>
+	<dimen name="one_hundred_fifty_dp">150dp</dimen>
+	<dimen name="one_hundred_sixty_dp">160dp</dimen>
+	<dimen name="one_hundred_eighty_dp">180dp</dimen>
+	<dimen name="two_hundred_dp">200dp</dimen>
+	<dimen name="two_hundred_twenty_dp">220dp</dimen>
+	<dimen name="two_hundred_twenty_five_dp">225dp</dimen>
+	<dimen name="two_hundred_forty_dp">240dp</dimen>
+	<dimen name="two_hundred_fifty_dp">250dp</dimen>
+	<dimen name="two_hundred_eighty_dp">280dp</dimen>
+	<dimen name="three_hundred_ten_dp">310dp</dimen>
+	<dimen name="three_hundred_twenty_dp">320dp</dimen>
+	<dimen name="three_hundred_forty_three_dp">343dp</dimen>
+	<dimen name="three_hundred_fifty_dp">350dp</dimen>
+	<dimen name="four_hundred">400dp</dimen>
+	<dimen name="four_hundred_forty_dp">440dp</dimen>
+	<dimen name="five_hundred">500dp</dimen>
+
+
+	<dimen name="main_margin">@dimen/eight_dp</dimen>
+
+	<dimen name="main_padding">@dimen/eight_dp</dimen>
+	<dimen name="main_padding_start">@dimen/four_dp</dimen>
+	<dimen name="main_padding_end">@dimen/four_dp</dimen>
+
+	<dimen name="large_padding_start">@dimen/fourteen_dp</dimen>
+	<dimen name="large_padding_end">@dimen/fourteen_dp</dimen>
+
+	<dimen name="button_large_margin_start">@dimen/twenty_dp</dimen>
+	<dimen name="button_large_margin_end">@dimen/twenty_dp</dimen>
+
+	<dimen name="main_button_margin_start">@dimen/twenty_four_dp</dimen>
+	<dimen name="main_button_margin_end">@dimen/twenty_four_dp</dimen>
+
+	<dimen name="padding_checkbox">@dimen/sixteen_dp</dimen>
+
+</resources>
