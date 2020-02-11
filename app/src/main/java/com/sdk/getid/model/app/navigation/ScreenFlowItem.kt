@@ -1,6 +1,7 @@
 package com.sdk.getid.model.app.navigation
 
-import com.sdk.getidlib.FlowScreens
+import com.sdk.getidlib.config.FlowScreens
+
 
 /**
  * Created by Pavlo Kuchirka on 15-Oct-19.
