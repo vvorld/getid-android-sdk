@@ -7,9 +7,9 @@ import com.sdk.getid.model.app.flow.TypeFlow
 import com.sdk.getid.model.app.navigation.ScreenFlowItem
 import com.sdk.getid.presentation.global.BasePresenterImpl
 import com.sdk.getid.ui.common.ActionBarMode
-import com.sdk.getidlib.ConfigurationPreset
-import com.sdk.getidlib.FlowScreens
-import com.sdk.getidlib.GetIDFactory
+import com.sdk.getidlib.config.ConfigurationPreset
+import com.sdk.getidlib.config.FlowScreens
+import com.sdk.getidlib.config.GetIDFactory
 
 /**
  * Created by Pavlo Kuchirka on 01-Nov-19.
@@ -27,6 +27,7 @@ class ChooseTypeFlowPresenter : BasePresenterImpl<ChooseTypeFlowContract.View>()
 
     override fun onStart() {
         view.changeToolbarMode(ActionBarMode.HIDE)
+        view.setAgreeButtonTitle(getStringRes(R.string.begin))
         initTypeOfFlows()
         super.onStart()
     }
