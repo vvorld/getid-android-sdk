@@ -46,13 +46,13 @@ Then initialize a `GetIDFactory` using the `apiKey`, `url`.
 **Kotlin**
 
 ```kotlin
-GetIDFactory.setup("YOUR_API_KEY", "YOUR_URL", ConfigurationPreset())
+GetIDFactory.setup(appContext, "YOUR_API_KEY", "YOUR_URL", ConfigurationPreset())
 ```
 
 **Java**
 
 ```java
-GetIDFactory.setup("YOUR_API_KEY", "YOUR_URL", new ConfigurationPreset());
+GetIDFactory.setup(appContext, "YOUR_API_KEY", "YOUR_URL", new ConfigurationPreset());
 ```
 
 ## Customization
@@ -63,6 +63,7 @@ You can customize the SDK flow. Create an instance of the `Configuration` class,
 
 - `flowItems` -  specifies the screens to be displayed and their order. 
 - `formFields` -  specifies the fields to be displayed on the form screen.
+- `selfieConfig` -  specifies the fields to change time for video recording (optional).
 - `acceptableCountries` -  specifies a list of countries whose documents are accepted for verification. 
 - `acceptableDocumentTypes` -  specifies a list of document types accepted for verification. 
 
@@ -74,7 +75,7 @@ val configPreset = ConfigurationPreset(
     formFields = listOf(FormField("Birth place", FormValueType.COUNTRY))
 )
 
-GetIDFactory.setup("YOUR_API_KEY", "YOUR_URL", configPreset)
+GetIDFactory.setup(appContext, "YOUR_API_KEY", "YOUR_URL", configPreset)
 ```
 
 **Java**
@@ -94,7 +95,7 @@ ConfigurationPreset configPreset = new ConfigurationPreset(
     null,         
     null);
 
-GetIDFactory.setup("YOUR_API_KEY", "YOUR_URL", configPreset);
+GetIDFactory.setup(appContext, "YOUR_API_KEY", "YOUR_URL", configPreset);
 ```
 
 ### Changing flow content
@@ -128,6 +129,10 @@ Supported value types:
 - SEX - Choice default value `"male"` or `"female"`
 - COUNTRY - `String` in `ISO 3166-1 alpha-2` format
 
+### Selfie config setup
+
+You can change time (in seconds) for video recording. By default value is 3 seconds. Video recording starts at the moment when selfie screen activated. Video recording stops at the moment when selfie took. The latest N seconds of the recorded video will be saved within application.
+
 ### Acceptable countries setup
 
 You can limit the list of issuing countries, also you need to add list of ISO 3166-1 alpha-2 codes to `acceptableCountries` property of `ConfigurationPreset`.
@@ -142,6 +147,103 @@ Supported document types are:
 - DRIVING_LICENCE
 - PASSPORT
 - RESIDENCE_PERMIT
+
+## Permissions
+
+You can request additional permissions:
+
+-  Video-recording feature (not enabled by default)
+-  Liveness
+
+## UI customization
+
+You can customize some colors, logo used in the SDK. Create an instance of the `DesignColorSchema` class, change its properties and pass it to the property `design` of the `ConfigurationPreset` class.
+
+- `backgroundColorHex` - The background color of all screens
+- `accentColorHex` - The color of graphic elements such as guides on the camera screen and other.
+- `placeholdeColorHex` - The color of the placeholders on the form screen.
+- `textColorHex` - The primary text color.
+- `infoTextColorHex` - The text color of info messages.
+- `buttonBackgroundColorHex` - The background color of the main action button at the bottom of the screen.
+- `buttonTextColorHex` - The text color of the main action button at the bottom of the screen.
+- `tickColorHex` - The color of the tick symbol in checkmark views.
+- `toolbarColorHex` - The color of the view items in toolbar.
+- `toolbarTextColorHex` - The text color in toolbar.
+- `logoDrawableRes` - The image shown on the consent screen.
+
+**Kotlin**
+
+```kotlin
+val design = DesignColorSchema(
+    backgroundColorHex = "#2072E1",
+    accentColorHex = "#1A5BB4",
+    placeholdeColorHex = "#FFFFFF",
+    textColorHex = "#002F5F",
+    logoDrawableRes = R.drawable.ic_logo_sdk
+)
+```
+
+**Java**
+
+```java
+DesignColorSchema design = new DesignColorSchema(
+    "#2072E1",        
+    "#1A5BB4",         
+    "#FFFFFF",         
+    "#002F5F",
+    null,
+    null,
+    null,
+    null,
+    null,
+    R.drawable.ic_logo_sdk);
+```
+
+## SDK Events
+
+You can catch and handle event from SDK. Create an listener of the `BroadcastReceiverListener` and pass it to `GetIDFactory.setup()` method.
+
+```kotlin
+val eventListener = object : BroadcastReceiverListener {
+        override fun onReceive(event: Event) {
+            when (event.eventType) {
+                EventType.EVENT_COMMON -> handleEventCommon(event.eventCommon)
+                EventType.EVENT_SCREEN -> handleEventScreen(event.eventScreen)
+            }
+        }
+
+GetIDFactory().setup(appContext, "YOUR_API_KEY", "YOUR_URL", configuration, eventListener)
+```
+
+There are two types of events `EventType.EVENT_COMMON`, `EventType.EVENT_SCREEN` 
+
+`EVENT_COMMON` has a `EventCommon` class model witch contains `event` field.
+
+`event` types are:
+
+-  `EventCommonType.ON_STOP`
+-  `EventCommonType.EA_ID_ALREADY_EXISTS`
+
+`EVENT_SCREEN` has a `EventScreen` class model witch contains of two fields: `name`, `stepPhase`
+
+`name` types are:
+
+-  `EventScreenType.CONSENT`
+-  `EventScreenType.FORM`
+-  `EventScreenType.DOCUMENT_TYPE`
+-  `EventScreenType.FRONT`
+-  `EventScreenType.BACK`
+-  `EventScreenType.SINGLE`
+-  `EventScreenType.SELFIE`
+-  `EventScreenType.LIVENESS`
+-  `EventScreenType.LOADING`
+-  `EventScreenType.THANK_YOU`
+
+`stepPhase` types are:
+
+-  `EventStepPhase.STARTED`
+-  `EventStepPhase.COMPLETED`
+-  `EventStepPhase.GO_BACK`
 
 ## Localization
 
