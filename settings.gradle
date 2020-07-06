@@ -1,2 +1,2 @@
-include ':app', ':getidlib'
+include ':app'
 rootProject.name='GetIdSample'
