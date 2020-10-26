@@ -16,7 +16,7 @@ val formFieldsMap = mutableMapOf<String, List<FormFields>>()
 formFieldsMap["Form"] = listOf(FormField("Birth place", FormValueType.DATE))
 
 val configPreset = ConfigurationPreset(
-    flowItems = listOf(SCREEN_CONSENT, SCREEN_SELFIE, SCREEN_DOCUMENT, SCREEN_THANKS),
+    flowItems = listOf(SCREEN_CONSENT, SCREEN_SELFIE, SCREEN_DOCUMENT, SCREEN_FORM, SCREEN_THANKS),
     formFields = formFieldsMap
 )
 
@@ -30,6 +30,7 @@ List<String> flowItems = new ArrayList<>();
 flowItems.add(SCREEN_CONSENT);
 flowItems.add(SCREEN_SELFIE);
 flowItems.add(SCREEN_DOCUMENT);
+flowItems.add(SCREEN_FORM);
 
 Map<String, ArrayList<FormFields>> formFields = new HashMap<String, ArrayList<FormFields>>();
 List<FormField> fields = new ArrayList<>();
@@ -58,7 +59,7 @@ formFieldsMap["FirstForm"] = listOf(FormField("Birth place", FormValueType.DATE)
 formFieldsMap["SecondForm"] = listOf(FormField("First name", FormValueType.TEXT), FormField("Last name", FormValueType.TEXT))
 
 val configPreset = ConfigurationPreset(
-    flowItems = listOf(SCREEN_CONSENT, SCREEN_SELFIE, SCREEN_DOCUMENT, SCREEN_THANKS),
+    flowItems = listOf(SCREEN_CONSENT, SCREEN_SELFIE, SCREEN_DOCUMENT, SCREEN_FORM, SCREEN_THANKS),
     formFields = formFieldsMap
 )
 
@@ -72,6 +73,7 @@ List<String> flowItems = new ArrayList<>();
 flowItems.add(SCREEN_CONSENT);
 flowItems.add(SCREEN_SELFIE);
 flowItems.add(SCREEN_DOCUMENT);
+flowItems.add(SCREEN_FORM);
 
 Map<String, ArrayList<FormFields>> formFields = new HashMap<String, ArrayList<FormFields>>();
 List<FormField> firstFormFields = new ArrayList<>();

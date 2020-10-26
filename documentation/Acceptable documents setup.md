@@ -8,3 +8,4 @@ Supported document types are:
 - DRIVING_LICENCE
 - PASSPORT
 - RESIDENCE_PERMIT
+- VOTER_CARD
