@@ -31,14 +31,12 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
 
     def appAnnotations = rootProject.ext.appAnnotations
     def appDependencies = rootProject.ext.appDependencies
     def testDependencies = rootProject.ext.testDependencies
 
-    implementation "ee.getid:getidlib:1.2.3"
+    implementation "ee.getid:getidlib:1.5.1"
 
     // Android Support
     implementation appDependencies.appCompat

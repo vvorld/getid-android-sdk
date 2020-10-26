@@ -5,6 +5,7 @@ You can specify which screens should be displayed in the flow and the order of t
 - SCREEN_CONSENT
 - SCREEN_FORM
 - SCREEN_DOCUMENT
+- SCREEN_LIVENESS
 
 - SCREEN_SELFIE
 
