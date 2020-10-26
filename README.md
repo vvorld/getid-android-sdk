@@ -69,7 +69,7 @@ GetIDFactory.setup(appContext, "YOUR_API_KEY", "YOUR_URL", new ConfigurationPres
 
 -[Acceptable documents setup](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Acceptable%20documents%20setup.md)
 
--[Video recording step](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Video%20recording%20config%20step.md)
+-[Video recording step](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Video%20recording%20config%20setup.md)
 
 -[Thank you config setup](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Thank%20you%20config%20setup.md)
 
