@@ -61,22 +61,22 @@ GetIDFactory.setup(appContext, "YOUR_API_KEY", "YOUR_URL", new ConfigurationPres
 
 ## Customization
 
--[Flow](https://github.com/vvorld/getid-android-sdk/blob/update_doc/documentation/Flow.md)
+-[Flow](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Flow.md)
 
--[Changing flow content](https://github.com/vvorld/getid-android-sdk/blob/update_doc/documentation/Changing%20flow%20content.md)
+-[Changing flow content](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Changing%20flow%20content.md)
 
--[Selfie config setup](https://github.com/vvorld/getid-android-sdk/blob/update_doc/documentation/Selfie%20config%20setup.md)
+-[Selfie config setup](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Selfie%20config%20setup.md)
 
--[Acceptable documents setup](https://github.com/vvorld/getid-android-sdk/blob/update_doc/documentation/Acceptable%20documents%20setup.md)
+-[Acceptable documents setup](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Acceptable%20documents%20setup.md)
 
--[Thank you config setup](https://github.com/vvorld/getid-android-sdk/blob/update_doc/documentation/Thank%20you%20config%20setup.md)
+-[Thank you config setup](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Thank%20you%20config%20setup.md)
 
--[Verification types](https://github.com/vvorld/getid-android-sdk/blob/update_doc/documentation/Verification%20types.md)
+-[Verification types](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Verification%20types.md)
 
--[Permissions](https://github.com/vvorld/getid-android-sdk/blob/update_doc/documentation/Permissions.md)
+-[Permissions](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Permissions.md)
 
--[UI customization](https://github.com/vvorld/getid-android-sdk/blob/update_doc/documentation/UI%20customization.md)
+-[UI customization](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/UI%20customization.md)
 
--[SDK Events](https://github.com/vvorld/getid-android-sdk/blob/update_doc/documentation/SDK%20Events.md)
+-[SDK Events](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/SDK%20Events.md)
 
--[Localization](https://github.com/vvorld/getid-android-sdk/blob/update_doc/documentation/Localization.md)
+-[Localization](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Localization.md)
