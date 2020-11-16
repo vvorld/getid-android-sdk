@@ -71,12 +71,12 @@ class ChooseTypeFlowPresenter : BasePresenterImpl<ChooseTypeFlowContract.View>()
     private fun startSdk() {
         val application = AndroidApplication.sInstance!!
 
-        val apiKey = "API_KEY"
         val url = "DOMAIN_URL"
+        val token = "YOUR_TOKEN"
 
         val configuration = getConfiguration()
 
-        GetIDFactory().setup(application, apiKey, url, configuration)
+        GetIDFactory().setup(application, configuration, token, url)
     }
 
 
