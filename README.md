@@ -28,6 +28,7 @@ In the `build.gradle` of project you want to use this package:
 ```
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
