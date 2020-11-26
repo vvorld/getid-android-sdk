@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'ee.getid:getidlib:1.5.3'
+    implementation 'ee.getid:getidlib:1.5.4'
 }
 ```
 
@@ -68,6 +68,7 @@ or
 GetIDFactory.setup(appContext, new ConfigurationPreset(), "YOUR_TOKEN", "YOUR_URL");
 ```
 
+Note: you must disable "Don't keep activities" option in Developers options of device
 
 ## Customization
 
