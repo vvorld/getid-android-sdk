@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'ee.getid:getidlib:1.5.4'
+    implementation 'ee.getid:getidlib:1.5.5'
 }
 ```
 
