@@ -37,8 +37,6 @@ To create a `FormField` object one should pass custom values in constructor:
 FormField(title = "Profession", valueType = FormValueType.CUSTOM, customValues = listOf("Developer", "Designer", "QA"))
 ```
 
-
-
 Also, `FormField` object has `isOptional` and `isHidden` flags (false by default).
 
 To create a `FormField` object one should pass the field flag to the constructor:
