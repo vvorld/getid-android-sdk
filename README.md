@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'ee.getid:getidlib:1.5.5'
+    implementation 'ee.getid:getidlib:1.5.6'
 }
 ```
 
@@ -46,26 +46,12 @@ And add to AndroidManifest.xml lines:
 
 ## Usage
 
-Then initialize a `GetIDFactory` using the `url`, `token` or `apiKey`.
+Then initialize a `GetIDFactory` using the `url` and`token`.
 
 **Kotlin**
 
 ```kotlin
-GetIDFactory.setup(appContext, "YOUR_API_KEY", "YOUR_URL", ConfigurationPreset())
-```
-or
-```kotlin
-GetIDFactory.setup(appContext, ConfigurationPreset(), "YOUR_TOKEN", "YOUR_URL")
-```
-
-**Java**
-
-```java
-GetIDFactory.setup(appContext, "YOUR_API_KEY", "YOUR_URL", new ConfigurationPreset());
-```
-or
-```java
-GetIDFactory.setup(appContext, new ConfigurationPreset(), "YOUR_TOKEN", "YOUR_URL");
+GetIDFactory.setup(appContext, ConfigurationPreset(), "YOUR_TOKEN", "YOUR_URL", listOf(Locale.ENGLISH))
 ```
 
 Note: you must disable "Don't keep activities" option in Developers options of device

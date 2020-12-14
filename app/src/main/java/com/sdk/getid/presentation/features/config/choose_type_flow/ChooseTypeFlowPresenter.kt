@@ -10,6 +10,8 @@ import com.sdk.getid.ui.common.ActionBarMode
 import com.sdk.getidlib.config.ConfigurationPreset
 import com.sdk.getidlib.config.FlowScreens
 import com.sdk.getidlib.config.GetIDFactory
+import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * Created by Pavlo Kuchirka on 01-Nov-19.
@@ -76,7 +78,7 @@ class ChooseTypeFlowPresenter : BasePresenterImpl<ChooseTypeFlowContract.View>()
 
         val configuration = getConfiguration()
 
-        GetIDFactory().setup(application, configuration, token, url)
+        GetIDFactory().setup(application, configuration, token, url, listOf(Locale.ENGLISH))
     }
 
 
