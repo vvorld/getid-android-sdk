@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'ee.getid:getidlib:1.5.6'
+    implementation 'ee.getid:getidlib:1.5.8'
 }
 ```
 
@@ -51,7 +51,47 @@ Then initialize a `GetIDFactory` using the `url` and`token`.
 **Kotlin**
 
 ```kotlin
+
+val config = ConfigurationPreset().apply {
+            flowItems = listOf(FlowScreens.SCREEN_CONSENT, FlowScreens.SCREEN_FORM, FlowScreens.SCREEN_DOCUMENT,
+            FlowScreens.SCREEN_SELFIE, FlowScreens.SCREEN_LIVENESS)
+            verificationTypes = listOf(VerificationTypesEnum.FACE_MATCHING, VerificationTypesEnum.DATA_EXTRACTION)
+        }
+
 GetIDFactory.setup(appContext, ConfigurationPreset(), "YOUR_TOKEN", "YOUR_URL", listOf(Locale.ENGLISH))
+```
+
+or
+
+**Java**
+
+```java
+List<FlowScreens> flowItems = new ArrayList<>();
+            flowItems.add(FlowScreens.SCREEN_CONSENT);
+            flowItems.add(FlowScreens.SCREEN_FORM);
+            flowItems.add(FlowScreens.SCREEN_DOCUMENT);
+            flowItems.add(FlowScreens.SCREEN_SELFIE);
+            flowItems.add(FlowScreens.SCREEN_LIVENESS);
+
+ArrayList<VerificationTypesEnum> verificationTypes = new ArrayList<>();
+verificationTypes.add(VerificationTypesEnum.FACE_MATCHING);
+verificationTypes.add(VerificationTypesEnum.DATA_EXTRACTION);
+
+ConfigurationPreset configPreset = new ConfigurationPreset(
+                    flowItems,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    verificationTypes,
+                    null,
+                    null);
+
+List<Locale> locale = new ArrayList<>();
+locale.add(Locale.ENGLISH);
+
+GetIDFactory.setup(appContext, configPreset, "YOUR_TOKEN", "YOUR_URL", locale, null);
 ```
 
 Note: you must disable "Don't keep activities" option in Developers options of device
