@@ -23,13 +23,21 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name="com.sdk.getid.ui.activity.AppActivity"
+            android:name="com.sdk.getid.ui.activity.StartActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.sdk.getid.ui.kotlin.KotlinAppActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.sdk.getid.ui.java.JavaAppActivity"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name="com.sdk.getidlib.ui.activity.GetIdActivity"

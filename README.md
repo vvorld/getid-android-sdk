@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'ee.getid:getidlib:1.5.8'
+    implementation 'ee.getid:getidlib:1.6.0'
 }
 ```
 
@@ -47,6 +47,8 @@ And add to AndroidManifest.xml lines:
 ## Usage
 
 Then initialize a `GetIDFactory` using the `url` and`token`.
+
+You have to get token from server. Please use request POST API_URL/sdk/v1/token and Headers: "Content-Type: application/json", "apikey: SDK_KEY".
 
 **Kotlin**
 

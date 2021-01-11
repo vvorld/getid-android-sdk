@@ -1,4 +1,4 @@
-package com.sdk.getid.ui.view.recycler
+package com.sdk.getid.ui.kotlin.recycler
 
 import android.content.Context
 import android.graphics.Rect

@@ -1,4 +1,4 @@
-package com.sdk.getid.ui.common.recycler
+package com.sdk.getid.ui.kotlin.common.recycler
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

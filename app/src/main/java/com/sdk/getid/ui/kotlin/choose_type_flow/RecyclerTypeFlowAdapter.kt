@@ -1,9 +1,9 @@
-package com.sdk.getid.ui.features.config.choose_type_flow
+package com.sdk.getid.ui.kotlin.choose_type_flow
 
 import androidx.recyclerview.widget.RecyclerView
 import com.sdk.getid.R
 import com.sdk.getid.model.app.flow.TypeFlow
-import com.sdk.getid.ui.common.recycler.BaseAdapter
+import com.sdk.getid.ui.kotlin.common.recycler.BaseAdapter
 import kotlinx.android.synthetic.main.recycler_type_flow_item.view.*
 
 

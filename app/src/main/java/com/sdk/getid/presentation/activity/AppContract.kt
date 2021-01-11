@@ -2,7 +2,7 @@ package com.sdk.getid.presentation.activity
 
 import android.content.Intent
 import com.sdk.getid.presentation.global.BaseContract
-import com.sdk.getid.ui.common.ActionBarMode
+import com.sdk.getid.ui.kotlin.common.ActionBarMode
 
 interface AppContract {
 

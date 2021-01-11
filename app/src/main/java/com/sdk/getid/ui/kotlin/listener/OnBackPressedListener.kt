@@ -1,4 +1,4 @@
-package com.sdk.getid.ui.listener
+package com.sdk.getid.ui.kotlin.listener
 
 interface OnBackPressedListener {
     fun onBackPressed()

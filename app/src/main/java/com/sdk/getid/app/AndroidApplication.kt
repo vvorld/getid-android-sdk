@@ -1,6 +1,7 @@
 package com.sdk.getid.app
 
 import android.app.Application
+import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics

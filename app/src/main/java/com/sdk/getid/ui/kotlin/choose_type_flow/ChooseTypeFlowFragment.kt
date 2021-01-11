@@ -1,4 +1,4 @@
-package com.sdk.getid.ui.features.config.choose_type_flow
+package com.sdk.getid.ui.kotlin.choose_type_flow
 
 import android.graphics.Color
 import android.graphics.PorterDuff
@@ -11,7 +11,7 @@ import com.sdk.getid.app.utils.getDrawable
 import com.sdk.getid.model.app.flow.TypeFlow
 import com.sdk.getid.presentation.features.config.choose_type_flow.ChooseTypeFlowContract
 import com.sdk.getid.ui.global.BaseFragment
-import com.sdk.getid.ui.view.recycler.HorizontalMarginItemDecoration
+import com.sdk.getid.ui.kotlin.recycler.HorizontalMarginItemDecoration
 import kotlinx.android.synthetic.main.fragment_choose_type_flow.*
 import org.koin.androidx.scope.currentScope
 import kotlin.math.abs
