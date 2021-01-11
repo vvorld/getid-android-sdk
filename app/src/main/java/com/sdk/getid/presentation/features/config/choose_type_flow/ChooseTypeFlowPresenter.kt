@@ -1,17 +1,22 @@
 package com.sdk.getid.presentation.features.config.choose_type_flow
 
+import android.util.Log
 import com.sdk.getid.R
 import com.sdk.getid.app.AndroidApplication
 import com.sdk.getid.app.common.objects.Screens
+import com.sdk.getid.app.utils.AppSetupState.Companion.GET_ID_SDK_DOMAIN
 import com.sdk.getid.model.app.flow.TypeFlow
 import com.sdk.getid.model.app.navigation.ScreenFlowItem
+import com.sdk.getid.model.app.network.RetrofitFactory
 import com.sdk.getid.presentation.global.BasePresenterImpl
-import com.sdk.getid.ui.common.ActionBarMode
+import com.sdk.getid.ui.kotlin.common.ActionBarMode
 import com.sdk.getidlib.config.ConfigurationPreset
 import com.sdk.getidlib.config.FlowScreens
 import com.sdk.getidlib.config.GetIDFactory
+import com.sdk.getidlib.model.data.service.JwtService
+import retrofit2.HttpException
+import retrofit2.Response
 import java.util.*
-import kotlin.collections.ArrayList
 
 /**
  * Created by Pavlo Kuchirka on 01-Nov-19.
@@ -73,14 +78,55 @@ class ChooseTypeFlowPresenter : BasePresenterImpl<ChooseTypeFlowContract.View>()
     private fun startSdk() {
         val application = AndroidApplication.sInstance!!
 
-        val url = "DOMAIN_URL"
-        val token = "YOUR_TOKEN"
+        val retrofitFactory = RetrofitFactory()
+        val retrofit = retrofitFactory.initRetrofit().create(JwtService::class.java)
 
-        val configuration = getConfiguration()
+        try {
+            val thread = Thread(Runnable {
+                try {
+                    val request = retrofit.getJwt().execute()
+                    handleRequest(request)?.apply {
+                        if (!token.isNullOrBlank()) {
+                            val configuration = getConfiguration()
 
-        GetIDFactory().setup(application, configuration, token, url, listOf(Locale.ENGLISH))
+                            GetIDFactory().setup(
+                                application,
+                                configuration,
+                                token!!,
+                                GET_ID_SDK_DOMAIN,
+                                listOf(Locale.ENGLISH)
+                            )
+                        }
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            })
+
+            thread.start()
+        } catch (e: HttpException) {
+            Log.e("request", e.message, e)
+        } catch (e: Throwable) {
+            Log.e("request", e.message, e)
+        }
     }
 
+    private fun <A> handleRequest(response: Response<A>): A? {
+        var handledResponse: A? = null
+        try {
+            if (response.isSuccessful) {
+                if (response.body() != null) {
+                    handledResponse = response.body()!!
+                }
+            }
+        } catch (e: HttpException) {
+            Log.e("token", e.message, e)
+        } catch (e: Throwable) {
+            Log.e("token", e.message, e)
+        }
+
+        return handledResponse
+    }
 
     private fun getConfiguration() = ConfigurationPreset().apply {
         flowItems = getFlowItems()

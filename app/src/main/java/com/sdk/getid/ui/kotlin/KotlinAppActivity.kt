@@ -1,4 +1,4 @@
-package com.sdk.getid.ui.activity
+package com.sdk.getid.ui.kotlin
 
 import android.app.Activity
 import android.content.Intent
@@ -15,15 +15,15 @@ import com.sdk.getid.app.utils.gone
 import com.sdk.getid.app.utils.hide
 import com.sdk.getid.app.utils.show
 import com.sdk.getid.presentation.activity.AppContract
-import com.sdk.getid.ui.common.ActionBarMode
-import com.sdk.getid.ui.common.ClickActionMenuListener
-import com.sdk.getid.ui.common.CustomMenuIconMode
+import com.sdk.getid.ui.kotlin.common.ActionBarMode
+import com.sdk.getid.ui.kotlin.common.ClickActionMenuListener
+import com.sdk.getid.ui.kotlin.common.CustomMenuIconMode
 import com.sdk.getid.ui.global.BaseActivity
-import com.sdk.getid.ui.listener.OnBackPressedListener
+import com.sdk.getid.ui.kotlin.listener.OnBackPressedListener
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.androidx.scope.currentScope
 
-class AppActivity : BaseActivity<AppContract.Presenter>(), AppContract.View {
+class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.View {
 
     override val presenter: AppContract.Presenter by currentScope.inject()
 

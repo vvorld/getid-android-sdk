@@ -1,7 +1,7 @@
 package com.sdk.getid.presentation.global
 
 import android.content.Context
-import com.sdk.getid.ui.common.ActionBarMode
+import com.sdk.getid.ui.kotlin.common.ActionBarMode
 
 /**
  * Created by Pavlo Kuchirka on 09-Oct-19.

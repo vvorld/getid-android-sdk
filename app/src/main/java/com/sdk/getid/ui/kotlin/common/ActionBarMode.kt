@@ -1,4 +1,4 @@
-package com.sdk.getid.ui.common
+package com.sdk.getid.ui.kotlin.common
 
 /**
  * Created by ku4irka on 07-Oct-19.

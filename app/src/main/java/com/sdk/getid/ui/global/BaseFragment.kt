@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.sdk.getid.presentation.activity.AppContract
 import com.sdk.getid.presentation.global.BaseContract
-import com.sdk.getid.ui.common.ActionBarMode
+import com.sdk.getid.ui.kotlin.common.ActionBarMode
 
 abstract class BaseFragment<T : BaseContract.Presenter<*>> : Fragment(), BaseContract.View {
 

@@ -4,8 +4,8 @@ import com.sdk.getid.presentation.activity.AppContract
 import com.sdk.getid.presentation.activity.AppPresenter
 import com.sdk.getid.presentation.features.config.choose_type_flow.ChooseTypeFlowContract
 import com.sdk.getid.presentation.features.config.choose_type_flow.ChooseTypeFlowPresenter
-import com.sdk.getid.ui.activity.AppActivity
-import com.sdk.getid.ui.features.config.choose_type_flow.ChooseTypeFlowFragment
+import com.sdk.getid.ui.kotlin.KotlinAppActivity
+import com.sdk.getid.ui.kotlin.choose_type_flow.ChooseTypeFlowFragment
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
@@ -15,7 +15,7 @@ import org.koin.dsl.module
  */
 val presentationModule = module {
 
-    scope(named<AppActivity>()) { scoped<AppContract.Presenter> { AppPresenter() } }
+    scope(named<KotlinAppActivity>()) { scoped<AppContract.Presenter> { AppPresenter() } }
 
     // Config Screen
     scope(named<ChooseTypeFlowFragment>()) {

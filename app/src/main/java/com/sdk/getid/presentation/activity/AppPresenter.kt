@@ -6,7 +6,7 @@ import com.sdk.getid.app.common.objects.Const.TWO_THOUSAND
 import com.sdk.getid.app.common.objects.Screens
 import com.sdk.getid.app.utils.getString
 import com.sdk.getid.presentation.global.BasePresenterImpl
-import com.sdk.getid.ui.common.ActionBarMode
+import com.sdk.getid.ui.kotlin.common.ActionBarMode
 
 /**
  * Created by ku4irka on 08-Oct-2019.

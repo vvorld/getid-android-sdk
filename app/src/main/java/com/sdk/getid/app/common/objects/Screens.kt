@@ -3,7 +3,7 @@ package com.sdk.getid.app.common.objects
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import com.sdk.getid.ui.features.config.choose_type_flow.ChooseTypeFlowFragment
+import com.sdk.getid.ui.kotlin.choose_type_flow.ChooseTypeFlowFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen
 
 
