@@ -60,7 +60,7 @@ val config = ConfigurationPreset().apply {
             verificationTypes = listOf(VerificationTypesEnum.FACE_MATCHING, VerificationTypesEnum.DATA_EXTRACTION)
         }
 
-GetIDFactory.setup(appContext, ConfigurationPreset(), "YOUR_TOKEN", "YOUR_URL", listOf(Locale.ENGLISH))
+GetIDFactory().setup(appContext, ConfigurationPreset(), "YOUR_TOKEN", "YOUR_URL", listOf(Locale.ENGLISH))
 ```
 
 or
@@ -93,7 +93,8 @@ ConfigurationPreset configPreset = new ConfigurationPreset(
 List<Locale> locale = new ArrayList<>();
 locale.add(Locale.ENGLISH);
 
-GetIDFactory.setup(appContext, configPreset, "YOUR_TOKEN", "YOUR_URL", locale, null);
+GetIDFactory getIDFactory = new GetIDFactory();
+getIDFactory..setup(appContext, configPreset, "YOUR_TOKEN", "YOUR_URL", locale, null);
 ```
 
 Note: you must disable "Don't keep activities" option in Developers options of device
