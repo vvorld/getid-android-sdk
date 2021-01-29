@@ -57,10 +57,10 @@ You have to get token from server. Please use request POST API_URL/sdk/v1/token 
 val config = ConfigurationPreset().apply {
             flowItems = listOf(FlowScreens.SCREEN_CONSENT, FlowScreens.SCREEN_FORM, FlowScreens.SCREEN_DOCUMENT,
             FlowScreens.SCREEN_SELFIE, FlowScreens.SCREEN_LIVENESS)
-            verificationTypes = listOf(VerificationTypesEnum.FACE_MATCHING, VerificationTypesEnum.DATA_EXTRACTION)
+            verificationTypes = arrayListOf(VerificationTypesEnum.FACE_MATCHING, VerificationTypesEnum.DATA_EXTRACTION)
         }
 
-GetIDFactory().setup(appContext, ConfigurationPreset(), "YOUR_TOKEN", "YOUR_URL", listOf(Locale.ENGLISH))
+GetIDFactory.setup(appContext, config, "YOUR_TOKEN", "YOUR_URL", listOf(Locale.ENGLISH))
 ```
 
 or
