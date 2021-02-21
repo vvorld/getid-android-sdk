@@ -63,6 +63,9 @@ public class JavaAppPresenter {
         verificationTypes.add(VerificationTypesEnum.DATA_EXTRACTION);
         verificationTypes.add(VerificationTypesEnum.WATCHLISTS);
 
+        Map<String,String> metadata = new HashMap<>();
+        metadata.put("dapartment","EST");
+
         ConfigurationPreset configPreset = new ConfigurationPreset(
                 flowItems,
                 formConfig,
@@ -71,7 +74,7 @@ public class JavaAppPresenter {
                 null,
                 documentConfig,
                 verificationTypes,
-                null,
+                metadata,
                 null);
 
         List<Locale> locale = new ArrayList<>();

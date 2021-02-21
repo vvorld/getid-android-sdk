@@ -109,6 +109,8 @@ Note: you must disable "Don't keep activities" option in Developers options of d
 
 -[Acceptable documents setup](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Acceptable%20documents%20setup.md)
 
+-[Metadata](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Metadata.md)
+
 -[Video recording step](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Video%20recording%20config%20setup.md)
 
 -[Thank you config setup](https://github.com/vvorld/getid-android-sdk/blob/master/documentation/Thank%20you%20config%20setup.md)
