@@ -48,4 +48,4 @@ List<Locale> locale = new ArrayList<>();
 locale.add(Locale.ENGLISH);
 
 GetIDFactory getIDFactory = new GetIDFactory();
-getIDFactory..setup(appContext, configPreset, "YOUR_TOKEN", "YOUR_URL", locale, null);
+getIDFactory.setup(appContext, configPreset, "YOUR_TOKEN", "YOUR_URL", locale, null);
