@@ -32,7 +32,6 @@
         android:layout_marginStart="@dimen/sixty_dp"
         android:layout_marginTop="@dimen/eighteen_dp"
         android:layout_marginEnd="@dimen/sixty_dp"
-        android:text="@string/config_description"
         android:textAlignment="center"
         android:textColor="@color/textAccentColor"
         android:textSize="@dimen/text_fifteen_sp"
