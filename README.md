@@ -79,6 +79,7 @@ GetIDSDK().startVerificationFlow(
 )
 ```
 or
+
 **Java**
 
 ```java
@@ -114,6 +115,7 @@ GetIDSDK().startVerificationFlow(
 )
 ```
 or
+
 **Java**
 
 ```java
