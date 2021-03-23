@@ -87,7 +87,7 @@ or
 new GetIDSDK().startVerificationFlow(
                 getApplicationContext(),
                 "API_URL",
-                new Key("SDK_KEY"),
+                new Key("SDK_KEY", null),
                 "FLOW_NAME",
                 null,
                 null,
