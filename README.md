@@ -68,6 +68,7 @@ Before you start please go to GetID Admin Panel and create a flow (Flows > Add n
 There are two ways to start the verification flow: using the `SDK KEY` or using a `JWT`. We recommend using JWT in the production environment. But during the development, you can use `SDK KEY`, because it's a little bit more convenient.
 
 Then call `GetIDSDK().startVerificationFlow()` method from the place in your code that responds to starting the verification flow. For example, it can be a handler of a button touch event.
+
 **Kotlin**
 
 ```kotlin
@@ -104,6 +105,7 @@ $ curl -H "Content-Type: application/json" -H "x-sdk-key: SDK_KEY" -X POST API_U
 ```
 
 Then pass the received token to `GetIDSDK().startVerificationFlow()` method:
+
 **Kotlin**
 
 ```kotlin
@@ -172,6 +174,7 @@ You can find more details on field names and their format in [this document](doc
 
 ### Metadata
 You can attach some metadata to a verification.
+
 **Kotlin**
 
 ```kotlin
@@ -207,6 +210,7 @@ new GetIDSDK().startVerificationFlow(
 By default, the SDK gets the list of device's preferred languages and chooses the best match from the list of [supported languages](#localisation). So you don't have to set up the language of the verification flow's UI.
 
 But if you want to override the default behavior by some reason, then pass `locale` to `GetIDSDK().startVerificationFlow()` method.
+
 **Kotlin**
 
 ```kotlin
@@ -248,6 +252,7 @@ If you want to handle the verification process completion then pass `eventListen
 Here is an example of handling GetID SDK callbacks:
 
 **Kotlin**
+
 ```kotlin
 GetIDSDK().startVerificationFlow(
     context = applicationContext,
