@@ -41,17 +41,6 @@
 
     <string name="go_to_settings">Go to settings</string>
 
-    <!-- Screens -->
-    <string name="screen_title_form">Personal data fields</string>
-    <string name="screen_title_choosing_document_type">Choose document</string>
-    <string name="screen_title_document_photo">Make document photo</string>
-    <string name="screen_title_front_side_photo">Make front side photo</string>
-    <string name="screen_title_back_side_photo">Make back side photo</string>
-    <string name="screen_title_selfie_photo">Make selfie photo</string>
-
-    <string name="male">Male</string>
-    <string name="female">Female</string>
-
     <!-- FlowTypeChoose -->
     <string name="document_and_photo">Document &amp; Photo</string>
     <string name="document_only">Document only</string>
