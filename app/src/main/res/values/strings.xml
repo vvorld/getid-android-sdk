@@ -49,9 +49,6 @@
     <string name="screen_title_back_side_photo">Make back side photo</string>
     <string name="screen_title_selfie_photo">Make selfie photo</string>
 
-    <string name="male">Male</string>
-    <string name="female">Female</string>
-
     <!-- FlowTypeChoose -->
     <string name="document_and_photo">Document &amp; Photo</string>
     <string name="document_only">Document only</string>
