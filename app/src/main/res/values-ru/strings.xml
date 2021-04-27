@@ -42,11 +42,15 @@
     <string name="go_to_settings">Перейдите в настройки</string>
 
     <!-- Screens -->
-    <string name="screen_title_choosing_document_type">Выбор документа</string>
 
     <!-- FlowTypeChoose -->
     <string name="document_and_photo">Документ и Фото</string>
     <string name="document_only">Только документ</string>
 
-
+    <string name="screen_title_form">Личные данные</string>
+    <string name="screen_title_choosing_document_type">Выбор документа</string>
+    <string name="screen_title_front_side_photo">Фото передней стороны</string>
+    <string name="screen_title_back_side_photo">Фото задней стороны</string>
+    <string name="screen_title_selfie_photo">Сделайте селфи</string>
+    <string name="screen_title_document_photo">Фото документа</string>
 </resources>
