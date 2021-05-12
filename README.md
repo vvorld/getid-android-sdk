@@ -5,7 +5,6 @@
 *   [Getting started](#getting-started)
     *   [Requirements](#requirements)
     *   [Obtaining an SDK key](#obtaining-an-sdk-key)
-    *   [Camera usage description](#camera-usage-description)
 *   [Installation](#installation)
 *   [Usage](#usage)
     *   [Starting the flow](#starting-the-flow)
@@ -35,9 +34,6 @@ Both can be found and modified either through your GetID Dashboard or via contac
 
 Note: In your GetID Dashboard, you can get and set `API KEY` and `SDK KEY`. `API KEY` grants you access to public API calls and SDK API calls. `SDK KEY` grants you access to SDK API calls only. For security reasons, strongly recommended using the `SDK KEY` in your SDK.
 
-### Camera usage description
-The SDK uses the camera for capturing photos during verification. The app is responsible for describing the reason for using the camera.
-
 ## Installation
 
 In the `build.gradle` of project you want to use this package:
@@ -51,14 +47,6 @@ repositories {
 dependencies {
     implementation "ee.getid:getidlib:2.1.1"
 }
-```
-
-And add to AndroidManifest.xml lines:
-
-```
-<activity
-    android:name="com.sdk.getidlib.ui.activity.GetIdActivity"
-    android:screenOrientation="portrait" />
 ```
 
 ## Usage
