@@ -36,7 +36,7 @@ dependencies {
     def appDependencies = rootProject.ext.appDependencies
     def testDependencies = rootProject.ext.testDependencies
 
-    implementation "ee.getid:getidlib:2.1.1"
+    implementation "ee.getid:getidlib:2.1.3"
 
     // Android Support
     implementation appDependencies.appCompat
