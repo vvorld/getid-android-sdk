@@ -11,6 +11,7 @@
     *   [Profile data](#profile-data)
     *   [Metadata](#metadata)
     *   [Locale](#locale)
+    *   [Custom dictionary](#custom-dictionary)
     *   [Handling callbacks](#handling-callbacks)
     *   [Possible errors](#possible-errors)
 *   [Localisation](#localisation)
@@ -227,6 +228,19 @@ new GetIDSDK().startVerificationFlow(
                 null
         );
 ```
+
+### Custom dictionary
+If you want to change some texts in the UI, then you have to upload one or more dictionaries to our backend. Our API documentation describes how to do that [on this page](https://developers.getid.ee/docs/post-create-dictionary). Once a dictionary is uploaded, pass its name as the `dictionary` parameter to the SDK initializer.
+```kotlin
+GetIDSDK().startVerificationFlow(
+    context = applicationContext,
+    apiUrl = "API_URL",
+    auth = Token("JWT"),
+    flowName = "FLOW_NAME",
+    dictionary = "custom-dictionary-name"
+)
+```
+
 ### Handling callbacks
 If you want to handle the verification process completion then pass `eventListener` to `GetIDSDK().startVerificationFlow()` method.
 
@@ -302,13 +316,23 @@ The list of supported languages:
 - Italian (`it`)
 - Polish (`pl`)
 - Dutch (`nl`)
+- Danish (`da`)
 - Greek (`el`)
+- Czech (`cs`)
 - Bulgarian (`bg`)
 - Romanian (`ro`)
 - Hungarian (`hu`)
 - Slovenian (`sl`)
 - Bosnian (`bs`)
 - Albanian (`sq`)
+- Macedonian (`mk`)
 - Estonian (`et`)
 - Lithuanian (`lt`)
 - Latvian (`lv`)
+- Finnish (`fi`)
+- Turkish (`tr`)
+- Japanese (`ja`)
+- Indonesian (`id`)
+- Thai (`th`)
+- Vietnamese (`vi`)
+- Chinese (`zh`)
