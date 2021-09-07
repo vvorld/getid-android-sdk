@@ -9,6 +9,7 @@
 *   [Usage](#usage)
     *   [Starting the flow](#starting-the-flow)
     *   [Profile data](#profile-data)
+    *   [Acceptable documents](#acceptable-documents)
     *   [Metadata](#metadata)
     *   [Locale](#locale)
     *   [Custom dictionary](#custom-dictionary)
@@ -160,6 +161,20 @@ new GetIDSDK().startVerificationFlow(
         );
 ```
 You can find more details on field names and their format in [this document](documentation/ProfileData.md).
+
+### Acceptable documents
+It's possible to limit the list of acceptable documents and issuing countries. In order to do that pass `acceptableDocuments` parameter to `GetIDSDK().startVerificationFlow()` method.
+
+```kotlin
+GetIDSDK().startVerificationFlow(
+  context = applicationContext,
+  apiUrl = "API_URL",
+  auth = Token("JWT"),
+  flowName = "FLOW_NAME",
+  acceptableDocuments = mapOf("EST" to listOf(DocumentEnum.PASSPORT, DocumentEnum.ID_CARD), "default" to listOf(DocumentEnum.PASSPORT))
+)
+```
+See more details on setting acceptable document types and countries in [this document](documentation/AcceptableDocuments.md).
 
 ### Metadata
 You can attach some metadata to a verification.
