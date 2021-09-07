@@ -336,3 +336,5 @@ The list of supported languages:
 - Thai (`th`)
 - Vietnamese (`vi`)
 - Chinese (`zh`)
+- Arabic (`ar`)
+- Persian (`fa`)
