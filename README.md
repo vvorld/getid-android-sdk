@@ -8,6 +8,7 @@
 *   [Installation](#installation)
 *   [Usage](#usage)
     *   [Starting the flow](#starting-the-flow)
+    *   [External IDs](#external-ids)
     *   [Profile data](#profile-data)
     *   [Acceptable documents](#acceptable-documents)
     *   [Metadata](#metadata)
@@ -122,6 +123,10 @@ new GetIDSDK().startVerificationFlow(
                 null
         );
 ```
+
+### External IDs
+There are two different external IDs that can be used to link a verification with a user in your system: `customerId` and `externalId`. See the details in [this document](documentation/ExternalIDs.md).
+
 ### Profile data
 If you have some information about the user before the verification flow started, you can pass it to the SDK as `profileData`.
 
@@ -338,6 +343,7 @@ The list of supported languages:
 - Romanian (`ro`)
 - Hungarian (`hu`)
 - Slovenian (`sl`)
+- Croatian (`hr`)
 - Bosnian (`bs`)
 - Albanian (`sq`)
 - Macedonian (`mk`)
@@ -347,7 +353,9 @@ The list of supported languages:
 - Finnish (`fi`)
 - Turkish (`tr`)
 - Japanese (`ja`)
+- Korean (`ko`)
 - Indonesian (`id`)
+- Malay (`ms`)
 - Thai (`th`)
 - Vietnamese (`vi`)
 - Chinese (`zh`)
