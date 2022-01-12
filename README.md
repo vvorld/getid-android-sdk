@@ -48,7 +48,7 @@ repositories {
 }
 
 dependencies {
-    implementation "ee.getid:getidlib:2.5.1"
+    implementation "ee.getid:getidlib:2.6.0"
 }
 ```
 
