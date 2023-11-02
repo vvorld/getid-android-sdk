@@ -4,25 +4,30 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import com.sdk.getid.R
+import com.sdk.getid.databinding.ActivityStartBinding
 import com.sdk.getid.ui.java.JavaAppActivity
 import com.sdk.getid.ui.kotlin.KotlinAppActivity
-import kotlinx.android.synthetic.main.activity_start.*
 
 
 class StartActivity : Activity() {
+
+    private lateinit var binding: ActivityStartBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_start)
 
-        btn_kotlin.setOnClickListener {
+        binding = ActivityStartBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
+        binding.btnKotlin.setOnClickListener {
             val myIntent = Intent(this@StartActivity, KotlinAppActivity::class.java)
             this@StartActivity.startActivity(myIntent)
         }
 
-        btn_java.setOnClickListener {
+        binding.btnJava.setOnClickListener {
             val myIntent = Intent(this@StartActivity, JavaAppActivity::class.java)
             this@StartActivity.startActivity(myIntent)
         }

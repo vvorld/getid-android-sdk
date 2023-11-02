@@ -14,16 +14,18 @@ import com.sdk.getid.app.utils.ViewUtils
 import com.sdk.getid.app.utils.gone
 import com.sdk.getid.app.utils.hide
 import com.sdk.getid.app.utils.show
+import com.sdk.getid.databinding.ActivityMainBinding
 import com.sdk.getid.presentation.activity.AppContract
+import com.sdk.getid.ui.global.BaseActivity
 import com.sdk.getid.ui.kotlin.common.ActionBarMode
 import com.sdk.getid.ui.kotlin.common.ClickActionMenuListener
 import com.sdk.getid.ui.kotlin.common.CustomMenuIconMode
-import com.sdk.getid.ui.global.BaseActivity
 import com.sdk.getid.ui.kotlin.listener.OnBackPressedListener
-import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.androidx.scope.currentScope
 
 class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.View {
+
+    private lateinit var binding: ActivityMainBinding
 
     override val presenter: AppContract.Presenter by currentScope.inject()
 
@@ -39,7 +41,9 @@ class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.Vie
         setTheme(R.style.AppTheme)
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         init()
         presenter.view = this
@@ -67,16 +71,18 @@ class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.Vie
         return super.onPrepareOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?) = when (item?.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         android.R.id.home -> {
             onBackPressed()
             true
         }
+
         R.id.action_custom -> {
             presenter.onClickActionMenu()
             true
         }
-        else -> super.onOptionsItemSelected(item!!)
+
+        else -> super.onOptionsItemSelected(item)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -115,11 +121,11 @@ class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.Vie
     }
 
     override fun showLoading() {
-        progressBar?.show()
+        binding.progressBar?.show()
     }
 
     override fun hideLoading() {
-        progressBar.gone()
+        binding.progressBar.gone()
     }
 
     override fun changeToolbarMode(mode: ActionBarMode) {
@@ -127,7 +133,7 @@ class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.Vie
     }
 
     override fun changeTitleToolbar(title: String) {
-        toolbar?.title = title
+        binding.toolbar.title = title
     }
 
     override fun showKeyboard(v: View) {
@@ -136,29 +142,29 @@ class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.Vie
 
     override fun hideKeyboard() {
         inputMethodManager?.apply {
-            if (isActive) hideSoftInputFromWindow(rootLayout.windowToken, 0)
+            if (isActive) hideSoftInputFromWindow(binding.rootLayout.windowToken, 0)
         }
     }
 
     override fun hideToolbarMode() {
         menuItem?.hide()
-        toolbar?.hide()
+        binding.toolbar.hide()
     }
 
     override fun backToolbarMode() {
         menuItem?.hide()
-        toolbar?.show()
+        binding.toolbar.show()
     }
 
     override fun plusToolbarMode() {
         menuItem?.show()
-        toolbar?.show()
+        binding.toolbar.show()
         customMenuIconMode = CustomMenuIconMode.PLUS
     }
 
     override fun doneToolbarMode() {
         menuItem?.show()
-        toolbar?.show()
+        binding.toolbar.show()
         customMenuIconMode = CustomMenuIconMode.DONE
     }
 
@@ -188,7 +194,7 @@ class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.Vie
     }
 
     private fun initToolbar() {
-        setSupportActionBar(toolbar)
+        setSupportActionBar(binding.toolbar)
 
         supportActionBar?.apply {
             setDisplayShowCustomEnabled(true)
@@ -201,7 +207,7 @@ class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.Vie
 
     private fun setContainerUnderToolbar() {
         val constraintSet = ConstraintSet()
-        constraintSet.clone(rootLayout)
+        constraintSet.clone(binding.rootLayout)
 
         // FrameLayout
         constraintSet.connect(
@@ -212,7 +218,7 @@ class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.Vie
             0
         )
 
-        constraintSet.applyTo(rootLayout)
+        constraintSet.applyTo(binding.rootLayout)
     }
 
 
@@ -220,7 +226,7 @@ class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.Vie
         val statusBarHeight = ViewUtils.getStatusBarHeight()
 
         val constraintSet = ConstraintSet()
-        val crossFade = rootLayout
+        val crossFade = binding.rootLayout
         constraintSet.clone(crossFade)
 
         // Toolbar
@@ -265,6 +271,6 @@ class KotlinAppActivity : BaseActivity<AppContract.Presenter>(), AppContract.Vie
 
     private fun setToolbarBackgroundColor(colorResId: Int) {
         val backgroundColor = ContextCompat.getColor(this, colorResId)
-        toolbar?.setBackgroundColor(backgroundColor)
+        binding.toolbar.setBackgroundColor(backgroundColor)
     }
 }

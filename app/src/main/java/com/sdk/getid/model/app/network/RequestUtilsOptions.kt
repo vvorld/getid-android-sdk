@@ -1,7 +1,7 @@
 package com.sdk.getid.model.app.network
 
 import com.sdk.getid.app.utils.AppSetupState
-import com.sdk.getidlib.model.data.service.ServiceParams.API_KEY
+//import com.sdk.getidlib.model.data.service.ServiceParams.API_KEY
 
 /**
  * Created by Pavlo Kuchirka on 11-Nov-19.
@@ -16,6 +16,6 @@ object RequestUtilsOptions {
     fun getRequestHeadersWithApiKey() = arrayListOf<Pair<String, String>>().apply {
         add(Pair(ACCEPT, APPLICATION_JSON))
         add(Pair(CONTENT_TYPE, APPLICATION_JSON))
-        add(Pair(API_KEY, AppSetupState.GET_ID_API_KEY))
+//        add(Pair(API_KEY, AppSetupState.GET_ID_API_KEY))
     }
 }

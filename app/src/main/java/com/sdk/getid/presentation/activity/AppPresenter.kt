@@ -57,9 +57,8 @@ class AppPresenter : BasePresenterImpl<AppContract.View>(), AppContract.Presente
             ActionBarMode.HIDE -> view.hideToolbarMode()
             ActionBarMode.BACK -> view.backToolbarMode()
             ActionBarMode.PLUS -> view.plusToolbarMode()
-            ActionBarMode.DONE -> view.doneToolbarMode()
+            else -> view.doneToolbarMode()
         }
-//        view.setupMainContainer(isContentUnderToolbar)
     }
 
     private fun showMessageOrExit() {

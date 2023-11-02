@@ -4,15 +4,17 @@ import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.sdk.getid.R
 import com.sdk.getid.app.utils.getDrawable
+import com.sdk.getid.databinding.FragmentChooseTypeFlowBinding
 import com.sdk.getid.model.app.flow.TypeFlow
 import com.sdk.getid.presentation.features.config.choose_type_flow.ChooseTypeFlowContract
 import com.sdk.getid.ui.global.BaseFragment
 import com.sdk.getid.ui.kotlin.recycler.HorizontalMarginItemDecoration
-import kotlinx.android.synthetic.main.fragment_choose_type_flow.*
 import org.koin.androidx.scope.currentScope
 import kotlin.math.abs
 
@@ -23,7 +25,8 @@ import kotlin.math.abs
 class ChooseTypeFlowFragment : BaseFragment<ChooseTypeFlowContract.Presenter>(),
     ChooseTypeFlowContract.View {
 
-    override val layoutRes = R.layout.fragment_choose_type_flow
+    private var _binding: FragmentChooseTypeFlowBinding? = null
+    private val binding get() = _binding!!
 
     override val presenter: ChooseTypeFlowContract.Presenter by currentScope.inject()
 
@@ -38,8 +41,22 @@ class ChooseTypeFlowFragment : BaseFragment<ChooseTypeFlowContract.Presenter>(),
         }
     }
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentChooseTypeFlowBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
     override fun setAgreeButtonTitle(title: String) {
-        tvAccept.text = title
+        binding.tvAccept.text = title
     }
 
     override fun showTypeOfFlows(flows: ArrayList<TypeFlow>) {
@@ -47,13 +64,13 @@ class ChooseTypeFlowFragment : BaseFragment<ChooseTypeFlowContract.Presenter>(),
     }
 
     private fun setViews() {
-        ivAccept.setOnClickListener { presenter.onClickAgree() }
-        tvAccept.setOnClickListener { presenter.onClickAgree() }
+        binding.ivAccept.setOnClickListener { presenter.onClickAgree() }
+        binding.tvAccept.setOnClickListener { presenter.onClickAgree() }
 
         viewPagerAdapter = RecyclerTypeFlowAdapter()
-        viewPager.apply {
+        binding.viewPager.apply {
             setPageTransformer(getPageTransformer())
-            addItemDecoration(HorizontalMarginItemDecoration(context!!, R.dimen.seventy_dp))
+            addItemDecoration(HorizontalMarginItemDecoration(requireContext(), R.dimen.seventy_dp))
 
             clipToPadding = false
             clipChildren = false
@@ -64,11 +81,11 @@ class ChooseTypeFlowFragment : BaseFragment<ChooseTypeFlowContract.Presenter>(),
             val drawableStart = getDrawable(R.drawable.ic_arrow_start_white)
             val drawableEnd = getDrawable(R.drawable.ic_arrow_end_white)
 
-            ivPagerClickStart.apply {
+            binding.ivPagerClickStart.apply {
                 setImageDrawable(drawableStart)
                 setOnClickListener { currentItem -= 1 }
             }
-            ivPagerClickEnd.apply {
+            binding.ivPagerClickEnd.apply {
                 setImageDrawable(drawableEnd)
                 setOnClickListener { currentItem += 1 }
             }
@@ -94,9 +111,11 @@ class ChooseTypeFlowFragment : BaseFragment<ChooseTypeFlowContract.Presenter>(),
                         0 -> {
                             colorSecondItem = white
                         }
+
                         viewPagerAdapter.itemList.size - 1 -> {
                             colorFirstItem = white
                         }
+
                         else -> {
                             colorFirstItem = white
                             colorSecondItem = white
