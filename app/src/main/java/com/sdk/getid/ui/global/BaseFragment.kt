@@ -2,9 +2,7 @@ package com.sdk.getid.ui.global
 
 import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.sdk.getid.presentation.activity.AppContract
 import com.sdk.getid.presentation.global.BaseContract
@@ -14,7 +12,6 @@ abstract class BaseFragment<T : BaseContract.Presenter<*>> : Fragment(), BaseCon
 
     private lateinit var baseViewAppView: AppContract.View
 
-    abstract val layoutRes: Int
     abstract val presenter: T
 
     override val viewContext: Context? get() = context
@@ -24,12 +21,6 @@ abstract class BaseFragment<T : BaseContract.Presenter<*>> : Fragment(), BaseCon
         baseViewAppView = activity as AppContract.View
         presenter.onCreate()
     }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ) = inflater.inflate(layoutRes, container, false)
 
     override fun onPause() {
         super.onPause()

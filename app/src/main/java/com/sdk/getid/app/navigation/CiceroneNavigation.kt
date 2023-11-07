@@ -6,9 +6,6 @@ import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.Router
 
 
-/**
- * Created by ku4irka on 07-Oct-2019.
- */
 object CiceroneNavigation {
 
     private fun cicerone(): Cicerone<Router> = CiceroneHolder.getCicerone(GLOBAL_CONTAINER)

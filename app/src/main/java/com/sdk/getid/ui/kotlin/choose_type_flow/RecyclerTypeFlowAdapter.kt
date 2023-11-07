@@ -1,21 +1,20 @@
 package com.sdk.getid.ui.kotlin.choose_type_flow
 
 import androidx.recyclerview.widget.RecyclerView
-import com.sdk.getid.R
+import com.sdk.getid.databinding.RecyclerTypeFlowItemBinding
 import com.sdk.getid.model.app.flow.TypeFlow
 import com.sdk.getid.ui.kotlin.common.recycler.BaseAdapter
-import kotlinx.android.synthetic.main.recycler_type_flow_item.view.*
+import com.sdk.getid.ui.kotlin.common.recycler.CommonVH
 
 
-/**
- * Created by Pavlo Kuchirka on 01-Nov-19.
- */
-class RecyclerTypeFlowAdapter : BaseAdapter<TypeFlow>(R.layout.recycler_type_flow_item) {
+class RecyclerTypeFlowAdapter :
+    BaseAdapter<TypeFlow, RecyclerTypeFlowItemBinding>(RecyclerTypeFlowItemBinding::inflate) {
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, currentItem: TypeFlow) {
+        val binding = (holder as? CommonVH)?.binding as? RecyclerTypeFlowItemBinding ?: return
         holder.itemView.apply {
-            imageView.setImageResource(currentItem.drawableRes)
-            textView.setText(currentItem.titleRes)
+            binding.imageView.setImageResource(currentItem.drawableRes)
+            binding.textView.setText(currentItem.titleRes)
         }
     }
 }

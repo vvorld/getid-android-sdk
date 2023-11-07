@@ -6,9 +6,6 @@ import android.view.View
 import androidx.annotation.DimenRes
 import androidx.recyclerview.widget.RecyclerView
 
-/**
- * Created by Pavlo Kuchirka on 04-Nov-19.
- */
 class HorizontalMarginItemDecoration(context: Context, @DimenRes horizontalMarginInDp: Int) :
     RecyclerView.ItemDecoration() {
 

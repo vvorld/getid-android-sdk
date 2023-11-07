@@ -7,10 +7,6 @@ import com.sdk.getid.ui.kotlin.choose_type_flow.ChooseTypeFlowFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen
 
 
-/**
- * Created by ku4irka on 07-Oct-2019.
- */
-
 object Screens {
 
     const val GLOBAL_CONTAINER = "global_container"

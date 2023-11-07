@@ -1,11 +1,10 @@
 apply plugin: "com.android.application"
 apply plugin: "kotlin-android"
 apply plugin: "kotlin-kapt"
-apply plugin: "kotlin-android-extensions"
+apply plugin: "kotlin-parcelize"
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {
         applicationId "com.sdk.getid"
@@ -17,6 +16,10 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -25,9 +28,13 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = "1.8"
-        targetCompatibility = "1.8"
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+    namespace 'com.sdk.getid'
 }
 
 dependencies {
@@ -42,7 +49,7 @@ dependencies {
     implementation appDependencies.appCompat
     implementation appDependencies.androidCore
     implementation appDependencies.legacyV4
-    implementation appDependencies.material // Conflict library
+    implementation appDependencies.material
     implementation appDependencies.ktx
     kapt appAnnotations.android
 
@@ -91,8 +98,4 @@ dependencies {
     androidTestImplementation testDependencies.androidJunit
     androidTestImplementation testDependencies.runner
     androidTestImplementation testDependencies.espresso
-}
-
-androidExtensions {
-    experimental = true
 }

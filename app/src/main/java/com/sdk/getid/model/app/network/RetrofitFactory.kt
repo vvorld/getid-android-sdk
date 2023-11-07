@@ -2,16 +2,16 @@ package com.sdk.getid.model.app.network
 
 import com.sdk.getid.app.utils.AppSetupState
 import com.sdk.getid.model.app.network.RequestUtilsOptions.getRequestHeadersWithApiKey
-import okhttp3.*
+import okhttp3.Headers
+import okhttp3.Interceptor
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-
-/**
- * Created by Pavlo Kuchirka on 11-Nov-19.
- */
 
 class RetrofitFactory {
 

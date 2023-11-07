@@ -8,9 +8,6 @@ import com.sdk.getid.app.utils.getString
 import com.sdk.getid.presentation.global.BasePresenterImpl
 import com.sdk.getid.ui.kotlin.common.ActionBarMode
 
-/**
- * Created by ku4irka on 08-Oct-2019.
- */
 
 class AppPresenter : BasePresenterImpl<AppContract.View>(), AppContract.Presenter {
 
@@ -57,9 +54,8 @@ class AppPresenter : BasePresenterImpl<AppContract.View>(), AppContract.Presente
             ActionBarMode.HIDE -> view.hideToolbarMode()
             ActionBarMode.BACK -> view.backToolbarMode()
             ActionBarMode.PLUS -> view.plusToolbarMode()
-            ActionBarMode.DONE -> view.doneToolbarMode()
+            else -> view.doneToolbarMode()
         }
-//        view.setupMainContainer(isContentUnderToolbar)
     }
 
     private fun showMessageOrExit() {

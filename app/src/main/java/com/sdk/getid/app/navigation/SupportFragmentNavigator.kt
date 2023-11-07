@@ -10,9 +10,6 @@ import ru.terrakok.cicerone.android.support.SupportAppScreen
 import ru.terrakok.cicerone.commands.Command
 
 
-/**
- * Created by ku4irka on 08-Oct-2019.
- */
 class SupportFragmentNavigator {
 
     fun initNavigator(

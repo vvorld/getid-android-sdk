@@ -1,11 +1,8 @@
 package com.sdk.getid.model.app.document
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
-/**
- * Created by Pavlo Kuchirka on 22-Oct-19.
- */
 
 @Parcelize
 data class DocumentField(
