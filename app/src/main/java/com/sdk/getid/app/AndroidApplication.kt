@@ -12,9 +12,6 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
 
-/**
- * Created by ku4irka on 07-Oct-2019.
- */
 class AndroidApplication : Application() {
 
     companion object {

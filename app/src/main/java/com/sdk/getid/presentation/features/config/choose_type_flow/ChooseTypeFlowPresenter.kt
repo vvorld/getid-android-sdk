@@ -8,9 +8,6 @@ import com.sdk.getid.ui.kotlin.common.ActionBarMode
 import com.sdk.getidlib.config.GetIDSDK
 import com.sdk.getidlib.model.app.auth.Key
 
-/**
- * Created by Pavlo Kuchirka on 01-Nov-19.
- */
 class ChooseTypeFlowPresenter : BasePresenterImpl<ChooseTypeFlowContract.View>(),
     ChooseTypeFlowContract.Presenter {
 

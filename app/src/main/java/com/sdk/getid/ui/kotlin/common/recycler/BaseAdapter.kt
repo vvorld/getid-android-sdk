@@ -6,9 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 
-/**
- * Created by Pavlo Kuchirka on 18-Oct-19.
- */
 abstract class BaseAdapter<T, VB : ViewBinding>(private val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> VB) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var itemList: ArrayList<T> = arrayListOf()

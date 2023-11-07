@@ -3,9 +3,6 @@ package com.sdk.getid.model.app.network
 import com.sdk.getid.app.utils.AppSetupState
 //import com.sdk.getidlib.model.data.service.ServiceParams.API_KEY
 
-/**
- * Created by Pavlo Kuchirka on 11-Nov-19.
- */
 
 object RequestUtilsOptions {
 

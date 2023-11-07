@@ -19,9 +19,6 @@ import org.koin.androidx.scope.currentScope
 import kotlin.math.abs
 
 
-/**
- * Created by Pavlo Kuchirka on 01-Nov-19.
- */
 class ChooseTypeFlowFragment : BaseFragment<ChooseTypeFlowContract.Presenter>(),
     ChooseTypeFlowContract.View {
 

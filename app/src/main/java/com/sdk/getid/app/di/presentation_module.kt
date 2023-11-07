@@ -10,9 +10,6 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
 
-/**
- * Created by ku4irka on 08-Oct-2019.
- */
 val presentationModule = module {
 
     scope(named<KotlinAppActivity>()) { scoped<AppContract.Presenter> { AppPresenter() } }

@@ -7,9 +7,6 @@ import com.sdk.getid.ui.kotlin.common.recycler.BaseAdapter
 import com.sdk.getid.ui.kotlin.common.recycler.CommonVH
 
 
-/**
- * Created by Pavlo Kuchirka on 01-Nov-19.
- */
 class RecyclerTypeFlowAdapter :
     BaseAdapter<TypeFlow, RecyclerTypeFlowItemBinding>(RecyclerTypeFlowItemBinding::inflate) {
 
