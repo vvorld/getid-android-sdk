@@ -27,7 +27,7 @@ This document describes how to use the version `2.0.0` or newer. The documentati
 
 ## Getting started
 ### Requirements
-- Android studio 3.5+
+- Android Studio Giraffe | 2022.3.1
 - Android sdk version 21+
 
 ### Obtaining an SDK key
