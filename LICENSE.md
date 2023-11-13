@@ -1,3 +1,5 @@
+The MIT License
+
 Copyright (c) 2017-2023 Checkin.com
 
 Permission is hereby granted, free of charge, to any person obtaining
