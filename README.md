@@ -23,7 +23,7 @@ The SDK provides a set of screens for capturing identity documents, face photos,
 
 The SDK does not provide methods for obtaining verification results. Use GetID API on your backend to get ones.
 
-This document describes how to use the version `2.0.0` or newer. The documentation for older versions is [here](documentation/README-v1.md).
+This document describes how to use the version `3.2.14` or newer. The documentation for older versions is [here](documentation/README-v1.md).
 
 ## Getting started
 ### Requirements
@@ -48,7 +48,7 @@ repositories {
 }
 
 dependencies {
-    implementation "ee.getid:getidlib:2.7.7"
+    implementation "ee.getid:getidlib:3.2.14"
 }
 ```
 
